@@ -1,0 +1,52 @@
+{
+  "name": "borglike",
+  "private": false,
+  "version": "0.1.1",
+  "type": "module",
+  "description": "Idle/incremental game featuring an auto-playing roguelike",
+  "author": "Namahanna",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Namahanna/borglike.git"
+  },
+  "homepage": "https://namahanna.github.io/borglike",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview",
+    "typecheck": "vue-tsc -b --noEmit",
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix",
+    "format": "prettier --write src",
+    "format:check": "prettier --check src",
+    "check": "pnpm run format && pnpm run typecheck && pnpm run lint",
+    "knip": "knip",
+    "diagnose": "tsx --tsconfig tsconfig.scripts.json scripts/diagnose.ts"
+  },
+  "dependencies": {
+    "@vueuse/core": "^14.1.0",
+    "idb": "^8.0.3",
+    "lz-string": "^1.5.0",
+    "pinia": "^3.0.4",
+    "rot-js": "^2.2.1",
+    "vue": "^3.5.24"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.2",
+    "@types/node": "^24.10.1",
+    "@vitejs/plugin-vue": "^6.0.1",
+    "@vue/tsconfig": "^0.8.1",
+    "eslint": "^9.39.2",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-vue": "^10.7.0",
+    "knip": "^5.82.1",
+    "prettier": "^3.8.0",
+    "tinypool": "^2.1.0",
+    "tsx": "^4.21.0",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.53.1",
+    "vite": "^7.2.4",
+    "vue-tsc": "^3.1.4"
+  }
+}
